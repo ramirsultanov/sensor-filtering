@@ -1,0 +1,10 @@
+ <launch>
+   <!-- start gazebo with an empty plane -->
+   <param name="/use_sim_time" value="true" />
+
+   <node name="gazebo" pkg="gazebo" type="gazebo" args="$(find gazebo_worlds)/worlds/wg.world" respawn="false" output="screen"/>
+
+
+   <include file="$(find turtlebot_gazebo)/launch/robot.launch"/>
+ </launch>
+ 
